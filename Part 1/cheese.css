@@ -1,0 +1,62 @@
+/* 
+    Andrew Le - https://github.com/AndrewLe0427/CSE134B_HW3
+*/
+
+body
+{
+    font-family:'Times New Roman', Times, serif;
+    color:brown;
+    line-height:1.5;
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1
+{
+    font-size: 2rem;
+}
+
+h2
+{
+    font-size: 1.5rem;
+}
+
+.latin
+{
+    font-style:italic;
+}
+
+#warning
+{
+    background-color:red;
+}
+
+blockquote
+{
+    border: solid 1px black;
+    padding: 10px;
+    margin: 15px;
+}
+
+a:hover
+{
+    color: ivory;
+}
+
+/*
+    Later value wins due to cascade. If specificity is the same,
+    then source order comes to play, which means rule that comes later wins.
+*/
+a:hover
+{
+    color: green;
+}
+
+button:focus, input:focus, a:focus
+{
+    outline-offset: 10px;
+    outline-color: blue;
+    outline-style: solid;
+    outline-width: 2px;
+}
