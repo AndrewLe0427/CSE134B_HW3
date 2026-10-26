@@ -1,0 +1,141 @@
+:root
+{
+    --background: #faf7f2;
+    --link-hover: #e8099a;
+    --text: #222222;
+    --space: 1rem;
+    --accent: #1a4fa0;
+    --font: "Times New Roman", Times, serif;
+    --max-width: 50rem;
+}
+
+header, main, footer
+{
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding: var(--space);
+}
+
+nav
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Descendant combinator: every link inside the nav must follow this rule*/
+nav a
+{
+    padding: 0.5em 0.9em;
+    color:var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    border-radius: 0.3em;
+}
+
+
+body
+{
+    margin: 0;
+    font-family: var(--font);
+    color: var(--text);
+    background-color:var(--background);
+    line-height: 1.5;
+}
+
+*
+{
+    box-sizing: border-box;
+}
+
+h1
+{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: calc(var(--space)*1.5) 0 var(--space);
+}
+
+h2
+{
+    font-size: 2rem;
+    margin: calc(var(--space)*1.5) 0 var(--space);
+}
+
+h3
+{
+    font-size: 1.5rem;
+    margin: calc(var(--space)*1.5) 0 var(--space);
+}
+
+p, ul, ol, dl
+{
+    margin: 0 0 var(--space);
+}
+
+input, textarea
+{
+    width: 100%;
+    font: 1.2rem "Georgia", serif;
+}
+
+img, video, canvas
+{
+    max-width: 100%;
+    height: auto;
+}
+
+a
+{
+    color: var(--accent);
+}
+
+a:hover, button:hover
+{
+    background-color: var(--accent);
+    color: var(--link-hover);
+}
+
+a:focus, button:focus, input:focus, textarea:focus
+{
+    outline: 2px solid rgba(117, 67, 235, 1.0);
+    outline-offset: 2px;
+}
+
+/* Attribute selector: links whose href starts with https must follow this rule */
+a[href^="https"]
+{
+    font-weight: bold;
+}
+
+dl
+{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.25rem var(--space);
+}
+
+/* Adjacent sibling combinator: the value right after contact labels must folow this rule */
+dt + dd
+{
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 0.25rem;
+}
+
+job-experience 
+{
+    display: block;
+}
+
+footer
+{
+    border-top: 2px solid var(--accent);
+    margin-top: calc(var(--space)*2);
+}
+
+@media (max-width: 600px)
+{
+    nav
+    {
+        flex-direction: column;
+    }
+}
